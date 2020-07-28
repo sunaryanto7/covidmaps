@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+$color-text: #333;
+$color-red: #bc1818;
+$color-orange: rgb(212, 136, 13);
+$color-green: green;
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-sensif;
+	color: $color-text;
+}
+h1, h2, h3, h4, h5, h6{
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.card {
+	padding: 15px;
+	min-height: 50px;
+	border-radius: 5px;
+	color: white;
+	.card-title{
+		.title{
+			font-weight: 400;
+		}
+	}
+}
+
+.wraper{
+	height: 100%;
+	.sidebar{
+		background: white ;
+		box-shadow:0 0 25px 0 #ddd;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		width: 270px;
+		overflow-y: scroll;
+		.sidebar-title .title{
+			text-align:center;
+			font-weight: 500;
+			margin-top: 1.5rem;
+		}
+		.sidebar-content{
+			padding: 15px;
+			.card {
+				margin-bottom: 15PX;
+				min-height:  80px;
+				&.card-pill{
+					min-height: unset;
+				}
+				&.card-positive{
+					background: $color-red;
+				}
+				&.card-control{
+					background-color: $color-orange;
+				}
+				&.card-negative{
+					background: $color-green;
+				}
+				.description{
+					font-size: 12px;
+					font-weight: 300;
+					margin-bottom: 0;
+				}
+			}
+		}
+		.sidebar-footer{
+			
+			.footer-content .copyright{
+				text-align: center;
+				font-weight: 400;
+			}
+		}
+		.title {
+			text-align: center;
+		}
+	}
+	.content{
+		position: absolute;
+		left: 270px;
+		right: 0;
+		height: 100%;
+	}
+}
